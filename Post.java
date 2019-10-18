@@ -117,7 +117,9 @@ public class Post
         c.gridx = 0;
         c.gridy = 1;
         c.gridwidth = 2;
+        c.ipady = 20;
         postContainer.add(postContent, c);
+        c.ipady = 0;
         
         /* TODO:
          * Create button that calls like();

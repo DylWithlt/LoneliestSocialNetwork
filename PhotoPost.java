@@ -65,7 +65,9 @@ public class PhotoPost extends Post
         ImagePanel imgPanel = new ImagePanel();
         imgPanel.setBorder(new EtchedBorder());
         
-        imgPanel.setImage(new OFImage(ImageFileManager.loadImage(new File(getImageFile()))));
+        OFImage currentImage = new OFImage(ImageFileManager.loadImage(new File(getImageFile())));
+        imgPanel.setImage(currentImage);
+        
         
         postContent.add(imgPanel);
         

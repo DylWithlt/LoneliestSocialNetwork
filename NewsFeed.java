@@ -50,7 +50,9 @@ public class NewsFeed
     {
         // display all posts
         for (Component x : mainFeed.getComponents()) {
-            mainFeed.remove(x);
+            if (!(x instanceof JScrollPane)) {
+                mainFeed.remove(x);
+            }   
         }
         mainFeed.revalidate();
         mainFeed.repaint();
@@ -174,12 +176,12 @@ public class NewsFeed
         contentPane.setLayout(new BorderLayout(6,6));
         
         mainFeed = new JPanel();
-        mainFeed.setLayout(new GridLayout(0, 1));
-        contentPane.add(mainFeed, BorderLayout.CENTER);
+        mainFeed.setLayout(new BoxLayout(mainFeed, BoxLayout.PAGE_AXIS));
         
-        JScrollPane scrPane = new JScrollPane();
+        JScrollPane scrPane = new JScrollPane(mainFeed);
         scrPane.setLayout(new ScrollPaneLayout());
-        mainFeed.add(scrPane);
+        scrPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        contentPane.add(scrPane);
         
         JPanel toolbar = new JPanel();
         toolbar.setLayout(new GridLayout(0, 1));
