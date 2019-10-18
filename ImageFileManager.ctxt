@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.target=ImageFileManager
+comment0.text=\r\n\ ImageFileManager\ is\ a\ small\ utility\ class\ with\ static\ methods\ to\ load\r\n\ and\ save\ images.\r\n\ \r\n\ The\ files\ on\ disk\ can\ be\ in\ JPG\ or\ PNG\ image\ format.\ For\ files\ written\r\n\ by\ this\ class,\ the\ format\ is\ determined\ by\ the\ constant\ IMAGE_FORMAT.\r\n\ \r\n\ @author\ Michael\ K\u00F6lling\ and\ David\ J.\ Barnes.\r\n\ @version\ 2.0\r\n
+numComments=1
